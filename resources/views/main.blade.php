@@ -26,7 +26,7 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="services" class="menu-btn">Services</a></li>
                 <li><a href="services" class="menu-btn">Skills</a></li>
-                <li><a href="contacts" class="menu-btn">Contact</a></li>
+                <li><a href="contacts" class="menu-btn">Contacts</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
