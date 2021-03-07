@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
 
+use App\Http\Controllers\BlogController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,10 +38,9 @@ Route::get('/post/create', function() {
     ]); 
 });
 
-Route::get('/post', function() {
-    $postTitle = Post::find(1)->title;
-    $postBody = Post::find(1)->body;
-    return $postTitle." <br>".$postBody;
-});
+Route::get('/post', [BlogController::class, 'index']);
+
+
+
 
 
