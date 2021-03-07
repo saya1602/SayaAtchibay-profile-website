@@ -30,16 +30,19 @@ Route::get('/contacts', function () {
     return view('contacts');
 }) -> name('contacts');
 
-Route::get('/post/create', function() {
-    DB::table('posts')->insert([
-        'id' => 1,
-        'title' => 'Lab 4',
-        'body' => 'This is my first post.'
-    ]); 
-});
+// Route::get('/post/create', function() {
+//     DB::table('posts')->insert([
+//         'id' => 1,
+//         'title' => 'Lab 4',
+//         'body' => 'This is my first post.'
+//     ]); 
+// });
 
 Route::get('/post', [BlogController::class, 'index']);
-
+Route::get('/post/create', function() {
+    return view('blog.create');
+});
+Route::post('post/create', [BlogController::class, 'store'])->name('add-blog');
 
 
 
