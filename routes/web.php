@@ -33,7 +33,7 @@ Route::get('/contacts', function () {
 
 Route::get('/post/add', function() {
     DB::table('posts')->insert([
-        'id' => 2,
+        'id' => 1,
         'title' => 'Lab 4',
         'body' => 'This is my second post.'
     ]); 
@@ -45,6 +45,6 @@ Route::get('/post/create', function() {
 });
 Route::post('post/create', [BlogController::class, 'store'])->name('add-blog');
 
-
+Route::get('post/{id}', [BlogController::class, 'get_post']);
 
 
