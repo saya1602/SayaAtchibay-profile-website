@@ -20,7 +20,6 @@ class ApiController extends Controller
         if($post == null) {
             return response(['message' => 'There is no client'], 404);
         }
-
         return response($post, 200);
     }
 }
