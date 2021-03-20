@@ -20,6 +20,7 @@ class BlogController extends Controller
             'title' => $request->title,
             'body' => $request->body
         ]);
+        // dd($request);
 
         return back();
     }
