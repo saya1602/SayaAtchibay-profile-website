@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
+use App\Models\Customer;
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +49,7 @@ Route::post('post/create', [BlogController::class, 'store'])->name('add-blog');
 
 Route::get('post/{id}', [BlogController::class, 'get_post']);
 
+Route::get('/sendemail', [CustomerController::class, 'index']);
+Route::post('/sendemail', [CustomerController::class, 'store'])->name('add-customer');
 
+Route::get('/customers/display', [CustomerController::class, 'display']);
